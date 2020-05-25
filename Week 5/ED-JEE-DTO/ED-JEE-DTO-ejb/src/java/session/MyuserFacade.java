@@ -56,7 +56,6 @@ public class MyuserFacade implements MyuserFacadeRemote {
     {
         String smtpServer = "smtp.gmail.com";
         String from = "One of my gmails was here";
-        //to = "grantstewart00@gmail.com";
         String subject = "Company Name Here, Your Details have been Changed.";
         String body = "Hi ,\nYour details have been changed. If you did not do this, contact us immediately!\nRegards";
         String emailUser = from;
