@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <from-view-id>/addUser.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.addUser}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/addUserSuccess.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.addUser}</from-action>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/addUserFailure.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule> 
+ 
+    <navigation-rule>                        
+        <from-view-id>/editUser.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.FindUser}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/editUserFound.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.FindUser}</from-action>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/editUserFail.xhtml</to-view-id>
+        </navigation-case>     
+    </navigation-rule>   
+  
+    <navigation-rule>                        
+        <from-view-id>/editUserFail.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.FindUser}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/editUserFound.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.FindUser}</from-action>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/editUserFail.xhtml</to-view-id>
+        </navigation-case>     
+    </navigation-rule>
+     
+    <navigation-rule>                        
+        <from-view-id>/editUserFound.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.EditUser}</from-action>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/editUserFoundSuccess.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{myuserManagedBean.EditUser}</from-action>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/editUserFoundFail.xhtml</to-view-id>
+        </navigation-case>     
+    </navigation-rule>    
+      
+</faces-config>
